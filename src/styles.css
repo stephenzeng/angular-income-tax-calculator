@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+.jumbotron {
+    background: url('assets/images/home.png') no-repeat center;
+    background-size: cover;
+    border-radius: 0;
+    height: 220px;
+    padding: 2rem 1rem;
+    border-bottom: 2px solid black;
+}
+
+.display-4 {
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 3.3rem;
+}
+
+.bg-dark {
+    background-color: black!important;
+}
+
+/*.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42A948;
+}
+
+.ng-invalid[required] {
+    border-left: 5px solid #a94442;
+}*/
+
+.validate-error-message {
+    color: #cc0300;
+}

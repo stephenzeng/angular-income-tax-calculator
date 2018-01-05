@@ -1,0 +1,22 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">    
+    <input type="text" class="form-control" id="income" name="income" placeholder="Input your annual income" required pattern="^\d*(\.?\d*)?$"
+      [(ngModel)]="model.income" #income="ngModel">
+    <div *ngIf="income.errors && (income.touched || income.dirty)" class="validate-error-message">
+      <span [hidden]="!income.errors.required">Please enter your annual income</span>
+      <span [hidden]="!income.errors.pattern">Please enter a valid number</span>
+    </div>
+  </div>
+  <!--<div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Your email"
+      email [(ngModel)]="model.email" [ngModelOptions]="{updateOn:'blur'}" #email="ngModel">
+    <div *ngIf="model?.email?.length && email.errors && (email.touched || email.dirty)" class="validate-error-message">
+      <span>Please enter a valid email address</span>
+    </div>
+  </div>-->
+  <button [disabled]="!userForm.form.valid" type="submit" class="btn btn-info">
+    <i class="fas fa-calculator"></i>
+    Calculate tax
+  </button>
+</form>
